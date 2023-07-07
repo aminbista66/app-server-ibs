@@ -1,0 +1,5 @@
+_SUCCESS_REGISTER_MESSAGE="user successfully registered"
+_SUCCESS_LOGIN_RESPONSE= "User login successfully"
+_PASSWORD_CHANGED="User Password changed successfully"
+_INCORRECT = " User Old Password is incorrect. Please Enter correct password"
+_NOT_MATCHED = " Confirm password and New Password donot match. "
