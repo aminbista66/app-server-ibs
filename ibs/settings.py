@@ -127,20 +127,10 @@ WSGI_APPLICATION = "ibs.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+import dj_database_url
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    },
-    "test": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "test.sqlite3",
-    },
-    "intelzy": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "intelzy.sqlite3",
-    },
+    "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 DATABASE_ROUTERS = ["tenants.router.TenantRouter"]
